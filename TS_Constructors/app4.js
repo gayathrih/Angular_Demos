@@ -1,0 +1,10 @@
+"use strict";
+exports.__esModule = true;
+var app3_1 = require("./app3");
+var app3_2 = require("./app3");
+//import java.lang.String;
+var a_obj_1 = new app3_1.A();
+console.log(a_obj_1.title);
+a_obj_1.show();
+var b_obj = new app3_2.B();
+console.log(b_obj.title);
