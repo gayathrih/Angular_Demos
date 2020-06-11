@@ -1,0 +1,4 @@
+import { filter } from 'rxjs/operators';
+…
+const source = from([1, 2, 3, 4]);
+const example = source.pipe(filter(num => num % 2 === 0));

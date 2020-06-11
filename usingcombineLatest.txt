@@ -1,0 +1,9 @@
+import { combineLatest } from 'rxjs';
+…
+const timerOne = timer(1000, 4000);
+const timerTwo = timer(2000, 4000);
+const timerThree = timer(3000, 4000);
+
+//when one timer emits, emit the latest values from each timer as an array
+//
+const combined = combineLatest(timerOne, timerTwo, timerThree);

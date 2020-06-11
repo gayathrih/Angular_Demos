@@ -1,0 +1,4 @@
+import { contains } from 'rxjs/operators';
+…
+var source = Rx.Observable.of(42)
+  .contains(42);

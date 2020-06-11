@@ -1,0 +1,10 @@
+//
+…
+var published = source
+    .replay(function (x) {
+        return x.take(2).repeat(2);
+    }, 3);
+
+published.subscribe(createObserver ('SourceA'));
+published.subscribe(createObserver ('SourceB'));
+//

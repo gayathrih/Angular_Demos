@@ -1,0 +1,5 @@
+import { amb } from 'rxjs/operators';
+…
+var first = Rx.Observable.timer(300).map(function () { return 'first'; });
+var second = Rx.Observable.timer(500).map(function () { return 'second'; });
+var source = first.amb(second);

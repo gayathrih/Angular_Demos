@@ -1,0 +1,12 @@
+//
+import { Observable } from "rxjs/Observable"
+
+//some code
+// create observable
+const simpleObservable = new Observable((observer) => {
+    
+    // observable execution
+    observer.next("hello")
+    observer.complete()
+})
+//

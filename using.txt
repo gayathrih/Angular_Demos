@@ -1,0 +1,16 @@
+function DisposableResource(value) {
+    this.value = value;
+    this.disposed = false;
+}
+
+//
+…
+var source = Rx.Observable.using(
+    function () { return new DisposableResource(42); },
+    function (resource) {
+        var subject = new Rx.AsyncSubject();
+        subject.onNext(resource.getValue());
+        subject.onCompleted();
+        return subject;
+    }
+);

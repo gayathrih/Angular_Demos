@@ -1,0 +1,16 @@
+//
+…
+let source = Observable.from([1, 2, 3])
+let connectable = source.publish();
+
+connectable.subscribe(val => console.log('obs1', val));
+connectable.subscribe(val => console.log('obs2', val));
+connectable.connect();
+
+//output:
+//obs1 1
+//obs2 1
+//obs1 2
+//obs2 2
+//obs1 3
+//obs2 3

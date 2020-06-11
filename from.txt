@@ -1,0 +1,15 @@
+//
+import { from } from 'rxjs';
+
+const data = from(fetch('/api/start'));
+
+//some code
+
+// Subscribe to begin listening for result
+data.subscribe({
+ next(response) { console.log(response); },
+ error(err) { console.error('Error: ' + err); },
+ complete() { console.log('Completed'); }
+});
+//some more code
+//

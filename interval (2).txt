@@ -1,0 +1,12 @@
+// 
+import { interval } from 'rxjs';
+
+const secondsCounter = interval(1000);
+
+// Subscribe to begin publishing values
+secondsCounter.subscribe(n =>
+  console.log('It's been ${n} seconds since subscribing!'));
+
+//some code
+//
+ 

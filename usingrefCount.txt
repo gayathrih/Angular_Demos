@@ -1,0 +1,7 @@
+//
+…
+var published = source.publish().refCount();
+
+published.subscribe(createObserver ('SourceA'));
+published.subscribe(createObserver ('SourceB'));
+//no connect needed after this
